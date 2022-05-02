@@ -47,7 +47,7 @@ QBCore.Functions.CreateCallback('enhancements:server:fetchEnhancements', functio
     return true
 end)
 
-Citizen.CreateThread(function()
+CreateThread(function()
     local function DecrementEnhancement(playerIdentifier, enhancementName)
         if playerEnhancements[playerIdentifier][enhancementName] - 1 < 0 then
             playerEnhancements[playerIdentifier][enhancementName] = nil
